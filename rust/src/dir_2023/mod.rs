@@ -1,5 +1,7 @@
 mod dayonea;
 mod dayoneb;
+mod daytwoa;
 
-pub use dayonea::a_part;
-pub use dayoneb::b_part;
+pub use dayonea::dayonea;
+pub use dayoneb::dayoneb;
+pub use daytwoa::daytwoa;

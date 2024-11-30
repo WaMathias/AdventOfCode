@@ -1,7 +1,7 @@
 use std::fs::File;
 use std::io::{BufRead, BufReader};
 
-pub fn b_part() -> Result<i32, std::io::Error> {
+pub fn dayoneb() -> Result<i32, std::io::Error> {
     let filename = "/home/mathias/Documents/AdventOfCode/calibrations.txt";
     let file = File::open(filename)?;
     let reader = BufReader::new(file);

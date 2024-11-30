@@ -1,9 +1,7 @@
-use regex::Regex;
 use std::fs::File;
 use std::io::{self, BufRead};
-use std::path::Path;
 
-pub fn a_part() -> io::Result<()> {
+pub fn dayonea() -> io::Result<()> {
     let path = "/home/mathias/Documents/AdventOfCode/calibrations.txt";
     let input = File::open(&path)?;
     let reader = io::BufReader::new(input);
