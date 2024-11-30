@@ -2,7 +2,7 @@ use std::fs::File;
 use std::io::{BufRead, BufReader};
 
 pub fn b_part() -> Result<i32, std::io::Error> {
-    let filename = "/home/mathias/Documents/AdventOfCode/calibrations.txt"; // Passe den Dateinamen an, wenn nötig
+    let filename = "/home/mathias/Documents/AdventOfCode/calibrations.txt";
     let file = File::open(filename)?;
     let reader = BufReader::new(file);
 
@@ -43,5 +43,5 @@ pub fn b_part() -> Result<i32, std::io::Error> {
     }
 
     println!("Sum: {}", sum);
-    Ok(sum as i32) // Entferne das abschließende Semikolon hier
+    Ok(sum as i32)
 }
