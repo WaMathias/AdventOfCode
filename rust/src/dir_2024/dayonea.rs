@@ -2,7 +2,6 @@ use std::fs::File;
 use std::io::{self, BufRead};
 
 pub fn dayonea() -> io::Result<()> {
-    // Pfad zur Eingabedatei
     let path = "/home/mathias/Documents/AdventOfCode/rust/input_dayone.txt"; // Ersetze dies durch den tatsächlichen Pfad
     let file = File::open(path)?;
     let reader = io::BufReader::new(file);
@@ -23,11 +22,20 @@ pub fn dayonea() -> io::Result<()> {
         }
     }
 
-    // Sortiere beide Listen
+    if left_list.is_empty() || right_list.is_empty() {
+        eprintln!("Eine oder beide Listen sind leer. Überprüfen Sie die Eingabedatei.");
+        return Ok(());
+    }
+
     left_list.sort_unstable();
     right_list.sort_unstable();
 
-    // Berechne die totale Distanz
+    if left_list.len() < right_list.len() {
+        left_list.resize(right_list.len(), 0);
+    } else if right_list.len() < left_list.len() {
+        right_list.resize(left_list.len(), 0);
+    }
+
     let total_distance: i32 = left_list
         .iter()
         .zip(right_list.iter())
