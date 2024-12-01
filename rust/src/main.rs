@@ -1,4 +1,5 @@
-mod dir_2023; // Modul deklarieren
+mod dir_2023;
+mod dir_2024;
 
 fn main() {
     dir_2023::dayonea().expect("Fehler bei der Ausführung von der Datei dayone.rs");

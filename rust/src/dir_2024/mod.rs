@@ -1,4 +1,4 @@
 mod dayonea;
 mod dayoneb;
 
-pub 
+pub use dayonea::dayonea;
